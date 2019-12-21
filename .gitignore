@@ -1,3 +1,4 @@
 node_modules/
 .env
 sass
+package-lock.json
