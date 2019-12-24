@@ -10,22 +10,26 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
 
-    trailSearch.randomTrail(); 
+       
 
     res.render('index'); 
 }); 
 
-app.get('trail', async (req, res) => {
-//get zip code and mileage 
-    try{
+app.get('/trail', async (req, res) => {
+let trailData; 
 
+    try{
+        let zip = req.query.zip; 
+        let mileage = req.query.distance; 
+        trailData = await trailSearch.randomTrail(zip, mileage); 
+        console.log(trailData); 
     }
 
     catch (e) {
         console.log('Trail search error: ', e.message); 
     }
 
-    res.render('trail'); 
+    res.render('trail', {trailData: trailData}); 
 })
 
 

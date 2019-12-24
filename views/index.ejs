@@ -4,9 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <title>Pathfinder</title>
 </head>
 <body>
-    <p>Success</p>
+    <div id="page-container">
+        <div id="content-wrap">
+            <header class="header">
+                <div id="container" class="header_container">
+                    <h1>Pathfinder</h1>
+                </div>
+            </header>
+        <main>
+            <div class="container">
+                <form action="/trail" method="GET" id="search-form">
+                    <div class="d-flex align-items-center text-center form-row">
+                        <div class="form-group col">
+                            <label class="pr-2" for="inputZip">Zipcode:</label>
+                            <input type="text" placeholder="Ex: 78751" name="zip" class="form-control-sm" id="inputZip" required>
+                        </div>
+                        <div class="form-group col">
+                            <label class="pr-2" for="inputDistance">Minimum Trail Length:</label>
+                            <select id="inputDistance" class="form-control-sm" name="distance">
+                            <option value="0" selected>No Minimum Length</option>
+                            <option value="4">4 Miles</option>
+                            <option value="8">8 Miles</option>
+                            <option value="10">10 Miles</option>
+                             </select>
+                        </div>
+                        <div class="form-group col">
+                            <button type="submit" class="btn search-button btn-lg btn-primary">Search!</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+        </main>
+        </div>
+        <footer id="footer">
+
+        </footer>
+    </div>
 </body>
 </html>
