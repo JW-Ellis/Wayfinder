@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond|Paytone+One&display=swap");
 *,
 *::after,
 *::before {
@@ -12,12 +13,34 @@ html {
 
 #page-container {
   position: relative;
-  background: #a51414;
+  background: #f4eec7;
   min-height: 100vh;
 }
 
 #content-wrap {
   padding-bottom: 10rem;
+}
+
+.search {
+  top: 26rem;
+  background-color: #fe9801;
+  box-shadow: 3px 8px 5px rgba(0, 0, 0, 0.377);
+  border: 0.4rem solid black;
+  color: #eeeeee;
+  border-radius: 0.75rem;
+  font-family: "Cutive Mono", monospace;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+#search-form {
+  padding: 1rem;
+}
+
+#left-half {
+  width: 50%;
+  position: absolute;
+  left: 0px;
 }
 
 .image-main {
@@ -31,6 +54,7 @@ html {
   right: 0px;
   height: 100vh;
   object-fit: cover;
+  box-shadow: -6px 8px 5px rgba(0, 0, 0, 0.377);
 }
 
 #footer {
@@ -39,23 +63,45 @@ html {
   left: 0;
   width: 100%;
   height: 10rem;
-  background-color: orange;
+  background-color: #2a2a2a;
 }
 
 .header {
-  background-color: #292523cc;
+  background-color: #697c37;
   position: relative;
-  height: 1rem;
+  height: 4rem;
   padding: 2rem;
-  text-align: center;
-  /* h1 {
-      font-size: 8rem;
+  text-align: left;
+  color: white;
+  border-bottom: 2.5px solid black;
+  font-family: "Paytone One", sans-serif;
+  /* h1 {         font-size: 8rem;
       padding-top: 2rem;
   } */
 }
 
-.header__container {
-  height: auto;
+.header_container h1 {
+  font-size: 3.5rem;
+}
+
+.home-container {
+  padding: 1rem;
+  margin: 3rem 2rem 2rem;
+}
+
+.home-content {
+  background-color: cornflowerblue;
+  color: #eeeeee;
+  font-size: 1.4rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  font-family: "Cutive Mono", monospace;
+  border: 0.2rem solid black;
+  box-shadow: 3px 8px 5px rgba(0, 0, 0, 0.377);
+}
+.home-content h2 {
+  font-weight: bold;
+  font-size: 2.1rem;
 }
 
 /*# sourceMappingURL=index.css.map */

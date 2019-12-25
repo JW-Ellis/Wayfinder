@@ -19,10 +19,17 @@
                 </div>
             </header>
         <main>
-            
-            <div class="container">
+            <div id="left-half">
+                <div class="row row-flex justify-content-center text-center home-container">
+                    <div class=" col-md-5 home-content">
+                        <h2>Discover a Trail</h2>
+                        <p>In the mood to explore? Make a search and get details on a trail in your area!</p>
+                    </div>                    
+                </div>
+            </div>
+            <div class="container position-relative search">
                 <form action="/trail" method="GET" id="search-form">
-                    <div class="d-flex align-items-center text-center form-row">
+                    <div id="test" class="d-flex align-items-center text-center form-row">
                         <div class="form-group col">
                             <label class="pr-2" for="inputZip">Zipcode:</label>
                             <input type="text" placeholder="Ex: 78751" name="zip" class="form-control-sm" id="inputZip" required>
