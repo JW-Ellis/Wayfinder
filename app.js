@@ -6,6 +6,9 @@ const trailSearch = require('./trailSearch');
 require('dotenv').config(); 
 
 app.set('view engine', 'ejs'); 
+app.use(express.static('img')); 
+app.use(express.static('public')); 
+
 
 
 app.get('/', (req, res) => {
@@ -19,10 +22,10 @@ app.get('/trail', async (req, res) => {
 let trailData; 
 
     try{
-        let zip = req.query.zip; 
-        let mileage = req.query.distance; 
-        trailData = await trailSearch.randomTrail(zip, mileage); 
-        console.log(trailData); 
+        //let zip = req.query.zip; 
+        //let mileage = req.query.distance; 
+        trailData = await trailSearch.randomTrail(); 
+        
     }
 
     catch (e) {
