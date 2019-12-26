@@ -43,9 +43,42 @@ html {
   left: 0px;
 }
 
+.search-results {
+  background-color: #fe9801;
+  box-shadow: 3px 8px 5px rgba(0, 0, 0, 0.377);
+  border: 0.4rem solid black;
+  margin: 3rem;
+  color: #eeeeee;
+  border-radius: 0.75rem;
+  font-family: "Cutive Mono", monospace;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.search-info {
+  background-color: cornflowerblue;
+  border-radius: 0.75rem;
+  box-shadow: 3px 8px 5px rgba(0, 0, 0, 0.377);
+  border: black solid 0.25rem;
+}
+
+.anchor-home {
+  padding: 1rem;
+}
+
+.anchor-home a {
+  color: blue;
+  font-weight: bold;
+}
+
 .image-main {
   max-width: 100%;
   height: auto;
+}
+
+.image-contain {
+  margin: 1rem;
+  border: 0.2rem solid black;
 }
 
 #right-half {

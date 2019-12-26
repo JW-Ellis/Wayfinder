@@ -17,32 +17,78 @@
                 </div>
             </header>
         <main>
-            <div class="container">
-                <div class="col-md-5 info-tiles">
-                    <h1>trail page</h1>
 
-                    <div class="row row-flex justify-content-center">
-                        <ul class="col-md-8 list-group-flush info-tiles">
-                        <li><%= trailData[0] %></li>
-                        <li><%= trailData[1] %></li>
-                        <li><%= trailData[2] %></li>
-                        <li><%= trailData[3] %></li>
-                        <li><%= trailData[4] %></li>
-                        <li><%= trailData[5] %></li>
-                        <li><%= trailData[6] %></li>
-                        <li><%= trailData[7] %></li>
-                        <li><%= trailData[8] %></li>
-                        <li><%= trailData[9] %></li>
-                        <li><%= trailData[10] %></li>
-                        <li><%= trailData[11] %></li>
-                                           
-                        </ul> 
+            <div class="container">
+                <div class="row row-flex justify-content-center">
+              <div class="col-md-8 search-results">
+                <h1><%= trailData[0] %></h1>
+                <h2><%= trailData[1] %></h2>
+                
+                    
+                <div class="row row-flex">
+                   <p><%= trailData[4] %></p> 
+                   <p><%= trailData[3] %></p>
+                    
+                </div>
+                    
+                    
+                    
+                   
+                    
+                                       
+                     
+                     <div class="image-contain img-fluid">
+                         <img src="<%= trailData[5] %>" alt="Trail Picture" class="img-fluid image-search">
+                     </div>          
+                            
+                                 
+              </div> 
+              
+                </div>
+              </div>
+
+            <div class="container">
+                <div class="row row-flex text-center justify-content-around">
+                    <div class="col-md-4 search-info">
+                            <h1>
+                                Trail Elevation
+                            </h1>
+                            <div class="text-left">
+                                <ul class="list-group-flush">
+                                    <li><%= trailData[6] %> Miles</li>
+                                    <li><%= trailData[7] %> Feet</li>
+                                    <li><%= trailData[8] %> Feet</li>
+                                    <li><%= trailData[9] %> Feet</li>
+                                    <li><%= trailData[10] %> Feet</li>
+                                </ul>
+                                
+                            </div>
                         
+                           
+                        </div>
+
+                        <div class="col-md-4 search-info">
+                            <div class="none">
+                                <h1>Trail Condition</h1>
+                                <li><%= trailData[11] %></li>
+                            </div>                      
+                          
+                            
                           </div>
-                    <a href="/">Go back to search!</a>
+                               
+                        </div> 
+               
+            </div>
+
+            <div class="container">
+                <div class="anchor-home">
+                    <a href="/"> Go back to search!</a>  
                 </div>
             </div>
 
+
+      
+        
 
         </main>
         </div>
