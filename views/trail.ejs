@@ -72,9 +72,7 @@
                             </div>
                             <div>
                                 <p id="picture-summary">explanation</p>
-                            </div>
-                            
-                        
+                            </div>                      
                            
                         </div>
 
@@ -83,11 +81,15 @@
                                 <h1>Trail Condition</h1>
                                 <div class="weather">
                                     <h2>Current weather</h2>
-                                    <ul>
-                                        <li>Tonight</li>
-                                        <li>75 Deg F</li>
-                                        <li>Detailed Forecast</li>
-                                    </ul>
+                                    
+                                        <ul>
+                                            <li><%= forecast[0] %></li>
+                                            <li><%= forecast[1] %>&#8457</li>
+                                            <li><%= forecast[2] %></li>
+                                        </ul>
+                                        
+                                    
+                                    
                                 </div>
                                 <div>
                                     <ul>
@@ -98,7 +100,6 @@
                                 
                             </div>                      
                           
-                            
                           </div>
                                
                         </div> 

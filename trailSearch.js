@@ -75,7 +75,7 @@ let trailCondition;
 
       
         
-        //parse trail json data
+        //Get trail json data
         trailName = trailRandom.name;
         trailSummary = trailRandom.summary;
         trailDifficulty = trailRandom.difficulty; 
