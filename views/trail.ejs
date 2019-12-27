@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <script src="\client.js"></script>
     <title>Pathfinder</title>
 </head>
 <body>
@@ -20,27 +22,28 @@
 
             <div class="container">
                 <div class="row row-flex justify-content-center">
-              <div class="col-md-8 search-results">
+              <div class="col-md-7 search-results">
                 <h1><%= trailData[0] %></h1>
                 <h2><%= trailData[1] %></h2>
                 
                     
-                <div class="row row-flex">
+                <div class="row row-flex justify-content-around">
                    <p><%= trailData[4] %></p> 
-                   <p><%= trailData[3] %></p>
+                   <div>
+                    
+                    <div class="stars-outer">
+                        
+                        <div class="stars-inner"></div>
+                      </div>
+                      <span class="number-rating"><%= trailData[3] %></span>
+                   </div>
+                   
                     
                 </div>
                     
-                    
-                    
-                   
-                    
-                                       
-                     
-                     <div class="image-contain img-fluid">
-                         <img src="<%= trailData[5] %>" alt="Trail Picture" class="img-fluid image-search">
-                     </div>          
-                            
+                    <div class="d-flex justify-content-center image-contain">
+                        <img src="<%= trailData[5] %>" onerror="this.onerror=null;this.src='noPhoto.jpg';" alt="Trail Picture" class="img-fluid image-contain image-search">
+                    </div>                                              
                                  
               </div> 
               
@@ -50,27 +53,49 @@
             <div class="container">
                 <div class="row row-flex text-center justify-content-around">
                     <div class="col-md-4 search-info">
-                            <h1>
-                                Trail Elevation
-                            </h1>
-                            <div class="text-left">
-                                <ul class="list-group-flush">
-                                    <li><%= trailData[6] %> Miles</li>
-                                    <li><%= trailData[7] %> Feet</li>
-                                    <li><%= trailData[8] %> Feet</li>
-                                    <li><%= trailData[9] %> Feet</li>
-                                    <li><%= trailData[10] %> Feet</li>
+                            <h1>Trail Summary</h1>
+                            <div class="row row-flex align-items-center justify-content-around">
+                                <div class="col-md-4">
+                                    <ul class="text-left">
+                                        <li><span class="trail-summary">Mileage</span>: <%= trailData[6] %> mi.</li>
+                                        <li><span class="trail-summary">Ascent</span>: <span class="trail-ascent"><%= trailData[7] %></span> Feet</li>
+                                        <li><span class="trail-summary">Decent</span>: <%= trailData[8] %> Feet</li>
+                                        <li><span class="trail-summary">Trail High</span>: <%= trailData[9] %> Feet</li>
+                                        <li><span class="trail-summary">Trail Low</span>: <%= trailData[10] %> Feet</li>  
                                 </ul>
-                                
+                                </div>
+
+
+                                <div class="col-md-4 trail-summaryCompare">                                   
+                                        <img src="" alt="Compare image" class="img-fluid" id="trail-picture">                                   
+                                </div>
                             </div>
+                            <div>
+                                <p id="picture-summary">explanation</p>
+                            </div>
+                            
                         
                            
                         </div>
 
                         <div class="col-md-4 search-info">
-                            <div class="none">
+                            <div>
                                 <h1>Trail Condition</h1>
-                                <li><%= trailData[11] %></li>
+                                <div class="weather">
+                                    <h2>Current weather</h2>
+                                    <ul>
+                                        <li>Tonight</li>
+                                        <li>75 Deg F</li>
+                                        <li>Detailed Forecast</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li><span class="trail-summary">Trail Condition Summary</span>: <%= trailData[11] %></li>
+                                    </ul>
+                                </div>
+                                
+                                
                             </div>                      
                           
                             
