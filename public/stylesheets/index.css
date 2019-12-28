@@ -39,20 +39,37 @@ html {
   font-weight: bold;
 }
 
+.trail-detail {
+  margin: 1.6rem 1rem;
+}
+
 .trail-summaryCompare {
   border-radius: 1rem;
   height: 20%;
   width: 20%;
 }
 
-#search-form {
-  padding: 1rem;
+.forecast-summary {
+  margin: 1rem;
+  font-size: 1.2rem;
 }
 
-#left-half {
-  width: 50%;
-  position: absolute;
-  left: 0px;
+.forecast-content {
+  margin: 1.6rem 1rem;
+}
+
+.forecast-temperature {
+  margin-right: 2rem;
+}
+.forecast-temperature h2 {
+  font-size: 2rem;
+}
+.forecast-temperature p {
+  font-size: 2rem;
+}
+
+#search-form {
+  padding: 1rem;
 }
 
 .search-results {
@@ -100,6 +117,10 @@ html {
   margin: 0rem 1rem 1.5rem;
 }
 
+#picture-summary {
+  font-size: 1.2rem;
+}
+
 #right-half {
   width: 50%;
   position: absolute;
@@ -109,12 +130,12 @@ html {
   box-shadow: -6px 8px 5px rgba(0, 0, 0, 0.377);
 }
 
-.trail-pyramid {
-  content: url(giza.jpg);
-}
-
-.trail-eiffel {
-  content: url(eiffel.jpg);
+#left-half {
+  width: 50%;
+  position: absolute;
+  left: 0px;
+  height: 100vh;
+  object-fit: cover;
 }
 
 .stars-outer {
@@ -192,8 +213,13 @@ html {
   font-size: 2.1rem;
 }
 
+h1 {
+  font-weight: bold;
+}
+
 .container ul {
   list-style: none;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=index.css.map */

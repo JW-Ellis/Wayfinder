@@ -54,14 +54,14 @@
                 <div class="row row-flex text-center justify-content-around">
                     <div class="col-md-4 search-info">
                             <h1>Trail Summary</h1>
-                            <div class="row row-flex align-items-center justify-content-around">
+                            <div class="row row-flex align-items-center justify-content-around trail-detail">
                                 <div class="col-md-4">
                                     <ul class="text-left">
                                         <li><span class="trail-summary">Mileage</span>: <%= trailData[6] %> mi.</li>
                                         <li><span class="trail-summary">Ascent</span>: <span class="trail-ascent"><%= trailData[7] %></span> Feet</li>
                                         <li><span class="trail-summary">Decent</span>: <%= trailData[8] %> Feet</li>
-                                        <li><span class="trail-summary">Trail High</span>: <%= trailData[9] %> Feet</li>
-                                        <li><span class="trail-summary">Trail Low</span>: <%= trailData[10] %> Feet</li>  
+                                        <li><span class="trail-summary">High</span>: <%= trailData[9] %> Feet</li>
+                                        <li><span class="trail-summary">Low</span>: <%= trailData[10] %> Feet</li>  
                                 </ul>
                                 </div>
 
@@ -71,31 +71,40 @@
                                 </div>
                             </div>
                             <div>
-                                <p id="picture-summary">explanation</p>
+                                <p id="picture-summary"></p>
                             </div>                      
                            
                         </div>
 
                         <div class="col-md-4 search-info">
                             <div>
-                                <h1>Trail Condition</h1>
+                                <h1>Trail Forecast</h1>
                                 <div class="weather">
-                                    <h2>Current weather</h2>
                                     
-                                        <ul>
-                                            <li><%= forecast[0] %></li>
-                                            <li><%= forecast[1] %>&#8457</li>
-                                            <li><%= forecast[2] %></li>
-                                        </ul>
+                                    <div class="d-flex align-items-center justify-content-center forecast-content">
+                                        <div class="forecast-temperature">
+                                            <h2><%= forecast[0] %></h2>
+                                            <p><%= forecast[1] %>&#8457</p>
+                                          
+                                        </div>
+                                       <div>
+                                           <img src="<%= forecast[3] %>" alt="Forecast Icon">
+                                       </div>
+
+                                    </div>
                                         
+                                        
+                                        <div class="forecast-summary">
+                                            <p><span class="trail-summary">Forecast Summary: </span><%= forecast[2] %></p>
+                                        </div>
                                     
                                     
                                 </div>
-                                <div>
+                               <!--  <div>
                                     <ul>
                                         <li><span class="trail-summary">Trail Condition Summary</span>: <%= trailData[11] %></li>
                                     </ul>
-                                </div>
+                                </div> -->
                                 
                                 
                             </div>                      

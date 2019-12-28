@@ -7,6 +7,7 @@ exports.forecast = async function search(){
 let name; 
 let temperature; 
 let detail; 
+let icon; 
 
     try {
         //let zipData = zipcodes.lookup(zip); 
@@ -30,8 +31,9 @@ let detail;
         name = forecastParse.name; 
         temperature = forecastParse.temperature; 
         detail = forecastParse.detailedForecast; 
+        icon = forecastParse.icon; 
 
-        return [name, temperature, detail]; 
+        return [name, temperature, detail, icon]; 
 
 
 
