@@ -1,41 +1,34 @@
-const express = require('express'); 
+const express = require('express');
+
 const app = express();
 const zipcodes = require('zipcodes');
-const fetch = require('node-fetch'); 
-const trailSearch = require('./trailSearch'); 
-const weatherSearch = require('./weatherSearch');  
-require('dotenv').config(); 
+const fetch = require('node-fetch');
+const trailSearch = require('./trailSearch');
+const weatherSearch = require('./weatherSearch');
+require('dotenv').config();
 
-app.set('view engine', 'ejs'); 
-app.use(express.static('img')); 
-app.use(express.static('public')); 
-
-
+app.set('view engine', 'ejs');
+app.use(express.static('img'));
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-
-    
-
-res.render('index'); 
-}); 
+  res.render('index');
+});
 
 app.get('/trail', async (req, res) => {
-let trailData; 
+  let trailData;
+  let forecast;
 
-    try{
-        //let zip = req.query.zip; 
-        //let mileage = req.query.distance; 
-        trailData = await trailSearch.randomTrail(); 
-        forecast = await weatherSearch.forecast(); 
-        
-    }
+  try {
+    const { zip } = req.query;
+    const length = req.query.distance;
+    trailData = await trailSearch.randomTrail(zip, length);
+    forecast = await weatherSearch.forecast(zip);
+  } catch (e) {
+    console.log('Trail search error: ', e.message);
+  }
 
-    catch (e) {
-        console.log('Trail search error: ', e.message); 
-    }
+  res.render('trail', { trailData, forecast });
+});
 
-    res.render('trail', {trailData: trailData, forecast: forecast}); 
-})
-
-
-app.listen(3000, () => console.log('listening at 3000')); 
+app.listen(3000, () => console.log('listening at 3000'));

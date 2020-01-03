@@ -20,36 +20,45 @@
                 </div>
             </header>
         <main>
-            <div id="left-half">
-                <div class="row row-flex justify-content-center text-center home-container">
-                    <div class=" col-md-5 home-content">
-                        <h2>Discover a Trail</h2>
-                        <p>Looking to explore? Make a search and get details on a trail in your area!</p>
-                    </div>                    
+
+
+
+            <div class="container">
+                <div class="d-flex flex-column align-items-center justify-content-center">
+                    <div class="col-md-5 align-items-center justify-content-center d-flex flex-column search">
+                        <div class="col-md-11 text-center">
+                            <h2>Discover a Trail</h2>
+                            <p>Pathfinder shows you the details of hiking trails in your area</p>
+                        </div>                    
+                    
+
+                    <form action="/trail" method="GET" class="d-flex flex-column justify-content-center col-md-6">
+                        <div class="d-flex justify-content-center align-items-end text-center zip-row">
+                            <div class="d-flex flex-column col-md-7">
+                                <label for="inputZip">Zipcode:</label>
+                                <input type="text" placeholder="Ex: 78751" name="zip" id="inputZip" required>
+                            </div>
+                            <div class="d-flex flex-column col-md-7">
+                                <label for="inputDistance">Trail Length:</label>
+                                <select id="inputDistance"  name="distance">
+                                <option value="0" selected>No Minimum</option>
+                                <option value="4">4 Miles</option>
+                                <option value="8">8 Miles</option>
+                                <option value="10">10 Miles</option>
+                                 </select>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center flex-column col-md-11">
+                            <button type="submit" class="btn search-button">Search</button>
+                        </div>
+
+                    </form>
+                    </div>
+                        
                 </div>
             </div>
-            <div class="container position-relative search">
-                <form action="/trail" method="GET" id="search-form">
-                    <div id="test" class="d-flex align-items-center text-center form-row">
-                        <div class="form-group col">
-                            <label class="pr-2" for="inputZip">Zipcode:</label>
-                            <input type="text" placeholder="Ex: 78751" name="zip" class="form-control-sm" id="inputZip" required>
-                        </div>
-                        <div class="form-group col">
-                            <label class="pr-2" for="inputDistance">Minimum Trail Length:</label>
-                            <select id="inputDistance" class="form-control-sm" name="distance">
-                            <option value="0" selected>No Minimum Length</option>
-                            <option value="4">4 Miles</option>
-                            <option value="8">8 Miles</option>
-                            <option value="10">10 Miles</option>
-                             </select>
-                        </div>
-                        <div class="form-group col">
-                            <button type="submit" class="btn search-button btn-lg btn-primary">Search!</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+            
 
 
         </main>

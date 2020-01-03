@@ -1,45 +1,39 @@
-const fetch = require('node-fetch'); 
+const fetch = require('node-fetch');
 const zipcodes = require('zipcodes');
 
+exports.forecast = async function search(zip) {
+  let name;
+  let temperature;
+  let detail;
+  let icon;
 
-exports.forecast = async function search(){
+  try {
+    const zipData = zipcodes.lookup(zip);
+    const lat = zipData.latitude;
+    const lon = zipData.longitude;
 
-let name; 
-let temperature; 
-let detail; 
-let icon; 
+    // Test Data
+    // const lat = 39.7162;
+    // const lon = -105.2098;
 
-    try {
-        //let zipData = zipcodes.lookup(zip); 
-        //let lat = zipData.latitude; 
-        //let lon = zipData.longitude;
+    const weatherURL = `https://api.weather.gov/points/${lat},${lon}`;
+    const weatherResponse = await fetch(weatherURL);
+    const weatherReturn = await weatherResponse.json();
 
-        let lat = 39.7162; 
-        let lon = -105.2098; 
-        
-        const weatherURL = `https://api.weather.gov/points/${lat},${lon}`; 
-        let weatherResponse = await fetch(weatherURL); 
-        let weatherReturn = await weatherResponse.json(); 
+    // Get forecast zone, office
+    const weatherForecast = await weatherReturn.properties.forecast;
+    const getForecast = await fetch(weatherForecast);
+    const forecastJSON = await getForecast.json();
+    const forecastParse = await forecastJSON.properties.periods[0];
 
-        //Get forecast zone, office
-        let weatherForecast = await weatherReturn.properties.forecast; 
-        let getForecast = await fetch(weatherForecast); 
-        let forecastJSON = await getForecast.json(); 
-        let forecastParse = await forecastJSON.properties.periods[0]; 
+    // Get forecast data
+    name = forecastParse.name;
+    temperature = forecastParse.temperature;
+    detail = forecastParse.detailedForecast;
+    icon = forecastParse.icon;
 
-        //Get forecast data
-        name = forecastParse.name; 
-        temperature = forecastParse.temperature; 
-        detail = forecastParse.detailedForecast; 
-        icon = forecastParse.icon; 
-
-        return [name, temperature, detail, icon]; 
-
-
-
-    }
-
-    catch(e) {
-        console.log('Forecast error: ', e.message); 
-    }
-}
+    return [name, temperature, detail, icon];
+  } catch (e) {
+    console.log('Forecast error: ', e.message);
+  }
+};
