@@ -32,7 +32,7 @@ exports.randomTrail = async function search(zip, length) {
     const resultsLength = trailParse.length;
     const trailSelect = Math.floor(Math.random() * resultsLength);
     const trailRandom = trailParse[trailSelect];
-    console.log(hpData);
+    
 
     // Get trail json data
     trailName = trailRandom.name;

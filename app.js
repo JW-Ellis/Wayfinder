@@ -31,4 +31,4 @@ app.get('/trail', async (req, res) => {
   res.render('trail', { trailData, forecast });
 });
 
-app.listen(3000, () => console.log('listening at 3000'));
+app.listen(process.env.PORT, () => console.log('listening at 8000'));
