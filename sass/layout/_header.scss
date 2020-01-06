@@ -1,0 +1,20 @@
+.header {
+     background-color: $color-header; 
+     position: relative;
+     height: 4rem; 
+     padding: 2rem;
+     text-align: left;
+     color: white;
+     border-bottom: 2.5px solid black;
+     font-family: $title-font;
+
+     /* h1 {         font-size: 8rem;
+         padding-top: 2rem;
+     } */
+ }
+ 
+ .header_container{
+     h1 {
+         font-size: 3.5rem;;
+     }
+ }

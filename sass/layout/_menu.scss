@@ -1,0 +1,33 @@
+.home-container {
+    padding: 1rem;
+    margin: 3rem 2rem 2rem;
+    //width: fit-content;
+}
+
+.home-content {
+    background-color: cornflowerblue;
+    color: #eeeeee;
+    font-size: 1.4rem;
+    padding: 1rem;
+    border-radius: .75rem;
+    font-family: $container-font;
+    border: 0.2rem solid black;
+    box-shadow: 3px 8px 5px rgba(0, 0, 0, 0.377);
+
+    h2 {
+        font-weight: bold;
+        font-size: 2.1rem;
+    }
+
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.container{
+    ul{
+        list-style: none;
+        font-size: 1.2rem; 
+    }
+}

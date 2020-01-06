@@ -1,0 +1,42 @@
+.image-main{
+    max-width: 100%;
+    height: auto; 
+}
+
+.image-search {
+    //padding: 1.0rem;
+    //object-fit: scale-down;
+    border: 0.2rem solid black;
+}
+
+.image-contain {
+    margin: 0rem 1rem 1.5rem;
+     
+}
+
+#picture-summary {
+    font-size: 1.2rem;
+}
+
+
+#right-half {
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    height: 100vh;
+    object-fit: cover;
+    box-shadow: -6px 8px 5px rgba(0, 0, 0, 0.377);
+}
+
+#left-half {
+    width: 50%;
+    position: absolute;
+    left: 0px;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#trail-picture {
+    border: 1px solid black;
+}
+

@@ -1,0 +1,58 @@
+//Search form 
+.search {
+    top: 20rem;
+    padding: 1rem;
+    background-color: $color-header;
+    box-shadow: 3px 8px 5px rgba(0, 0, 0, 0.377);
+    border: 0.4rem solid black;
+    color: #FFFFFF;
+    border-radius: .75rem; 
+    font-family: $container-font;
+    font-size: 1.4rem;
+    font-weight: bold;
+    
+    h2 {
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    p, label {
+        font-size: 1.5rem;
+    }
+}
+
+.zip-row {
+    margin: 1rem;
+
+    #inputZip, #inputDistance {
+        font-size: 1.5rem;
+        height: 100%;
+    }
+}
+
+//Trail results page 
+.search-results {
+    background-color: $color-header;
+    box-shadow: 3px 8px 5px rgba(0, 0, 0, 0.377);
+    border: 0.4rem solid black;
+    margin: 3rem;
+    color: $color-font;
+    border-radius: .75rem;
+    font-family: $container-font;
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    h1{
+        font-size: 3.5rem;
+        //font-weight: bold;
+    }
+}
+
+.search-info {
+    background-color: $color-secondary;
+    border-radius: 0.75rem;
+    box-shadow: 3px 8px 5px rgba(0, 0, 0, 0.377);
+    border: black solid 0.25rem;
+    font-family: "Cutive Mono", monospace;
+  }
