@@ -37,7 +37,7 @@ function setImage() {
     case ascent > 4000:
       document.querySelector('#trail-picture').src = 'sidu.jpg';
       document.querySelector('#picture-summary').innerHTML =
-        'The Sidu riber bridge in Enshi City, China is approximately 4,000 feet long!';
+        'The Sidu river bridge in Enshi City, China is approximately 4,000 feet long!';
       break;
     case ascent > 3000:
       document.querySelector('#trail-picture').src = 'burj.jpg';
