@@ -12,9 +12,20 @@ html {
   font-size: 62.5%;
 }
 
-#page-container {
+/* #page-container {
   position: relative;
-  background: #f4eec7;
+  background: $color-page;
+  min-height: 100vh;
+} */
+body {
+  background-image: url("../img/home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#page-containerPrimary {
+  position: relative;
   min-height: 100vh;
 }
 
@@ -29,9 +40,10 @@ html {
   height: 100%;
   font-size: 1.3rem;
   font-weight: bold;
-  color: #FFFFFF;
+  color: #ffffff;
   text-transform: uppercase;
-  background-color: #fe9801;
+  background-color: transparent;
+  border: none;
 }
 .search-button:focus, .search-button:hover {
   background-color: #ffbe5d;
@@ -75,6 +87,11 @@ html {
   font-size: 2rem;
 }
 
+.container {
+  margin: 3rem auto;
+  padding: 0;
+}
+
 .anchor-home {
   padding: 4rem;
 }
@@ -103,25 +120,14 @@ html {
   font-size: 1.2rem;
 }
 
-#right-half {
-  width: 50%;
-  position: absolute;
-  right: 0px;
-  height: 100vh;
-  object-fit: cover;
-  box-shadow: -6px 8px 5px rgba(0, 0, 0, 0.377);
-}
-
-#left-half {
-  width: 50%;
-  position: absolute;
-  left: 0px;
-  height: 100vh;
-  object-fit: cover;
-}
-
 #trail-picture {
   border: 1px solid black;
+}
+
+.arrow {
+  background-image: url("../img/arrow.png");
+  width: 1rem;
+  height: 1rem;
 }
 
 .stars-outer {
@@ -153,32 +159,47 @@ html {
 }
 
 .search {
-  top: 20rem;
+  margin-top: 42rem;
   padding: 1rem;
-  background-color: #697c37;
-  box-shadow: 3px 8px 5px rgba(0, 0, 0, 0.377);
-  border: 0.4rem solid black;
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 0.75rem;
-  font-family: "Cutive Mono", monospace;
+  font-family: "Courier New", serif;
   font-size: 1.4rem;
-  font-weight: bold;
 }
 .search h2 {
   font-size: 3rem;
   font-weight: bold;
-  text-transform: uppercase;
 }
-.search p, .search label {
-  font-size: 1.5rem;
+.search .margin-center {
+  margin-right: 7rem;
+}
+.search p,
+.search label {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.search select,
+.search input {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
 }
 
 .zip-row {
   margin: 1rem;
 }
-.zip-row #inputZip, .zip-row #inputDistance {
-  font-size: 1.5rem;
+.zip-row #inputZip,
+.zip-row #inputDistance {
+  font-size: 2rem;
   height: 100%;
+}
+.zip-row ::placeholder {
+  color: #ffffff;
+  opacity: 1;
+  font-size: 2rem;
+}
+.zip-row option {
+  background-color: #002860;
 }
 
 .search-results {
@@ -186,7 +207,7 @@ html {
   box-shadow: 3px 8px 5px rgba(0, 0, 0, 0.377);
   border: 0.4rem solid black;
   margin: 3rem;
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 0.75rem;
   font-family: "Cutive Mono", monospace;
   font-size: 1.4rem;
@@ -197,7 +218,7 @@ html {
 }
 
 .search-info {
-  background-color: #e08f62;
+  background-color: #fee8cd;
   border-radius: 0.75rem;
   box-shadow: 3px 8px 5px rgba(0, 0, 0, 0.377);
   border: black solid 0.25rem;
@@ -207,24 +228,15 @@ html {
 #footer {
   position: absolute;
   bottom: 0;
-  left: 0;
   width: 100%;
   height: 10rem;
-  background-color: #2a2a2a;
 }
 
 .header {
-  background-color: #697c37;
-  position: relative;
   height: 4rem;
-  padding: 2rem;
-  text-align: left;
-  color: white;
-  border-bottom: 2.5px solid black;
-  font-family: "Paytone One", sans-serif;
   /* h1 {         font-size: 8rem;
-      padding-top: 2rem;
-  } */
+         padding-top: 2rem;
+     } */
 }
 
 .header_container h1 {
@@ -249,15 +261,6 @@ html {
 .home-content h2 {
   font-weight: bold;
   font-size: 2.1rem;
-}
-
-h1 {
-  font-weight: bold;
-}
-
-.container ul {
-  list-style: none;
-  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=index.css.map */

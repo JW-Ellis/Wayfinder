@@ -5,7 +5,6 @@ require('dotenv').config();
 const hikeKey = process.env.HIKINGKEY;
 
 exports.randomTrail = async function search(zip, length) {
-
   let trailName;
   let trailSummary;
   let trailDifficulty;
@@ -32,7 +31,6 @@ exports.randomTrail = async function search(zip, length) {
     const resultsLength = trailParse.length;
     const trailSelect = Math.floor(Math.random() * resultsLength);
     const trailRandom = trailParse[trailSelect];
-    
 
     // Get trail json data
     trailName = trailRandom.name;

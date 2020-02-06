@@ -1,24 +1,35 @@
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-} 
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
 
 html {
-    font-size: 62.5%; 
-    
+  font-size: 62.5%;
 }
 
-#page-container{
-    position: relative;
-    background: $color-page;
-    min-height: 100vh;
+/* #page-container {
+  position: relative;
+  background: $color-page;
+  min-height: 100vh;
+} */
 
-   
+body {
+  background-image: url("../img/home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-#content-wrap{
-    padding-bottom: 10rem;
+#page-containerPrimary {
+  position: relative;
+  min-height: 100vh;
+
+  // background-color: $color-page;
+}
+
+#content-wrap {
+  padding-bottom: 10rem;
 }

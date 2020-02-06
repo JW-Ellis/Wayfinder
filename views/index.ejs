@@ -1,71 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
     <title>Pathfinder</title>
-</head>
-<body>
-    
-    <div id="page-container">
-        <img id="right-half" src="background.jpg" alt="Tree foreground with mountain background" class="img-fluid">
-        <img id="left-half" src="background-L.jpg" alt="Coffee stained notebook">
-        <div id="content-wrap">
-            <header class="header">
-                <div id="container" class="header_container">
-                    <h1>Pathfinder</h1>
-                </div>
-            </header>
+  </head>
+  <body>
+    <div id="page-containerPrimary">
+      <div id="content-wrap">
+        <header class="header"></header>
         <main>
-
-
-
-            <div class="container">
-                <div class="d-flex flex-column align-items-center justify-content-center">
-                    <div class="col-md-5 align-items-center justify-content-center d-flex flex-column search">
-                        <div class="col-md-11 text-center">
-                            <h2>Discover a Trail</h2>
-                            <p>Pathfinder shows you the details of hiking trails in your area</p>
-                        </div>                    
-                    
-
-                    <form action="/trail" method="GET" class="d-flex flex-column justify-content-center col-md-6">
-                        <div class="d-flex justify-content-center align-items-end text-center zip-row">
-                            <div class="d-flex flex-column col-md-7">
-                                <label for="inputZip">Zipcode:</label>
-                                <input type="text" placeholder="Ex: 78751" name="zip" id="inputZip" required>
-                            </div>
-                            <div class="d-flex flex-column col-md-7">
-                                <label for="inputDistance">Trail Length:</label>
-                                <select id="inputDistance"  name="distance">
-                                <option value="0" selected>No Minimum</option>
-                                <option value="4">4 Miles</option>
-                                <option value="8">8 Miles</option>
-                                <option value="10">10 Miles</option>
-                                 </select>
-                            </div>
-                        </div>
-
-                        <div class="d-flex align-items-center flex-column col-md-11">
-                            <button type="submit" class="btn search-button">Search</button>
-                        </div>
-
-                    </form>
-                    </div>
-                        
+          <div class="container">
+            <div
+              class="d-flex flex-column align-items-center justify-content-center"
+            >
+              <div
+                class="col-md-6 align-items-center justify-content-center d-flex flex-column search"
+              >
+                <div class="col-md-11 text-center">
+                  <h2>Discover your next adventure</h2>
                 </div>
+
+                <form
+                  action="/trail"
+                  method="GET"
+                  class="d-flex flex-column justify-content-center col-md-6"
+                >
+                  <div
+                    class="d-flex justify-content-center align-items-end zip-row"
+                  >
+                    <div class="d-flex flex-column col-md-9 margin-center">
+                      <label for="inputZip">Zip Code:</label>
+                      <input
+                        type="text"
+                        placeholder="Ex: 78751"
+                        name="zip"
+                        id="inputZip"
+                        required
+                      />
+                    </div>
+                    <div class="d-flex flex-column col-md-9">
+                      <label for="inputDistance">Trail Length:</label>
+                      <select id="inputDistance" name="distance">
+                        <option value="0" selected>No Minimum</option>
+                        <option value="4">4 Miles</option>
+                        <option value="8">8 Miles</option>
+                        <option value="10">10 Miles</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="d-flex align-items-end flex-column col-md-11">
+                    <button type="submit" class="search-button ">
+                      <div class="arrow"></div>
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
-            
-
-
+          </div>
         </main>
-        </div>
-        <footer id="footer">
-
-        </footer>
+      </div>
+      <footer id="footer"></footer>
     </div>
-</body>
+  </body>
 </html>

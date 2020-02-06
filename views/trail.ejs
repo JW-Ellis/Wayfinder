@@ -1,125 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/index.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+    />
     <script src="\client.js"></script>
     <title>Pathfinder</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="page-container">
-        <div id="content-wrap">
-            <header class="header">
-                <div id="container" class="header_container">
-                    <h1>Pathfinder</h1>
-                </div>
-            </header>
+      <div id="content-wrap">
+        <header class="header">
+          <div id="container" class="header_container">
+            <h1>Pathfinder</h1>
+          </div>
+        </header>
         <main>
-
-            <div class="container">
-                <div class="row row-flex justify-content-center">
+          <div class="container">
+            <div class="row row-flex justify-content-center">
               <div class="col-md-7 search-results">
                 <h1><%= trailData[0] %></h1>
                 <h2><%= trailData[1] %></h2>
-                
-                    
+
                 <div class="row row-flex justify-content-around">
-                   <p><%= trailData[4] %></p> 
-                   <div>
-                    
+                  <p><%= trailData[4] %></p>
+                  <div>
                     <div class="stars-outer">
-                        
-                        <div class="stars-inner"></div>
-                      </div>
-                      <span class="number-rating"><%= trailData[3] %></span>
-                   </div>
-                   
-                    
+                      <div class="stars-inner"></div>
+                    </div>
+                    <span class="number-rating"><%= trailData[3] %></span>
+                  </div>
                 </div>
-                    
-                    <div class="d-flex justify-content-center image-contain">
-                        <img src="<%= trailData[5] %>" onerror="this.onerror=null;this.src='noPhoto.jpg';" alt="Trail Picture" class="img-fluid image-contain image-search">
-                    </div>                                              
-                                 
-              </div> 
-              
+
+                <div class="d-flex justify-content-center image-contain">
+                  <img
+                    src="<%= trailData[5] %>"
+                    onerror="this.onerror=null;this.src='noPhoto.jpg';"
+                    alt="Trail Picture"
+                    class="img-fluid image-contain image-search"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row row-flex text-center justify-content-around">
+              <div class="col-md-4 search-info">
+                <h1>Trail Summary</h1>
+                <div
+                  class="row row-flex align-items-center justify-content-around trail-detail"
+                >
+                  <div class="col-md-4">
+                    <ul class="text-left">
+                      <li>
+                        <span class="trail-summary">Mileage</span>:
+                        <%=trailData[6] %> mi.
+                      </li>
+                      <li>
+                        <span class="trail-summary">Ascent</span>:
+                        <span class="trail-ascent"><%= trailData[7] %></span>
+                        Feet
+                      </li>
+                      <li>
+                        <span class="trail-summary">Decent</span>: <%=
+                        trailData[8] %> Feet
+                      </li>
+                      <li>
+                        <span class="trail-summary">High</span>: <%=
+                        trailData[9]%> Feet
+                      </li>
+                      <li>
+                        <span class="trail-summary">Low</span>: <%=
+                        trailData[10] %> Feet
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="col-md-4 trail-summaryCompare">
+                    <img
+                      src=""
+                      alt="Compare image"
+                      class="img-fluid"
+                      id="trail-picture"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <p id="picture-summary"></p>
                 </div>
               </div>
 
-            <div class="container">
-                <div class="row row-flex text-center justify-content-around">
-                    <div class="col-md-4 search-info">
-                            <h1>Trail Summary</h1>
-                            <div class="row row-flex align-items-center justify-content-around trail-detail">
-                                <div class="col-md-4">
-                                    <ul class="text-left">
-                                        <li><span class="trail-summary">Mileage</span>: <%= trailData[6] %> mi.</li>
-                                        <li><span class="trail-summary">Ascent</span>: <span class="trail-ascent"><%= trailData[7] %></span> Feet</li>
-                                        <li><span class="trail-summary">Decent</span>: <%= trailData[8] %> Feet</li>
-                                        <li><span class="trail-summary">High</span>: <%= trailData[9] %> Feet</li>
-                                        <li><span class="trail-summary">Low</span>: <%= trailData[10] %> Feet</li>  
-                                </ul>
-                                </div>
+              <div class="col-md-4 search-info">
+                <div>
+                  <h1>Trail Forecast</h1>
+                  <div class="weather">
+                    <div
+                      class="d-flex align-items-center justify-content-center forecast-content"
+                    >
+                      <div class="forecast-temperature">
+                        <h2><%= forecast[0] %></h2>
+                        <p><%= forecast[1] %></p>
+                      </div>
+                      <div>
+                        <img src="<%= forecast[3] %>" alt="Forecast Icon" />
+                      </div>
+                    </div>
 
-
-                                <div class="col-md-4 trail-summaryCompare">                                   
-                                        <img src="" alt="Compare image" class="img-fluid" id="trail-picture">                                   
-                                </div>
-                            </div>
-                            <div>
-                                <p id="picture-summary"></p>
-                            </div>                      
-                           
-                        </div>
-
-                        <div class="col-md-4 search-info">
-                            <div>
-                                <h1>Trail Forecast</h1>
-                                <div class="weather">
-                                    
-                                    <div class="d-flex align-items-center justify-content-center forecast-content">
-                                        <div class="forecast-temperature">
-                                            <h2><%= forecast[0] %></h2>
-                                            <p><%= forecast[1] %>&#8457</p>
-                                          
-                                        </div>
-                                       <div>
-                                           <img src="<%= forecast[3] %>" alt="Forecast Icon">
-                                       </div>
-
-                                    </div>
-                                        
-                                        
-                                        <div class="forecast-summary">
-                                            <p><span class="trail-summary">Forecast Summary: </span><%= forecast[2] %></p>
-                                        </div>
-                                </div>
-                              
-                            </div>                      
-                          </div>
-                        </div> 
-                        <div class="anchor-home">
-                            <a href="/"> Go back to search!</a>  
-                        </div>
+                    <div class="forecast-summary">
+                      <p>
+                        <span class="trail-summary">Forecast Summary: </span><%=
+                        forecast[2] %>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <div class="container">
-                
+            <div class="anchor-home">
+              <a href="/"> Go back to search!</a>
             </div>
+          </div>
 
-
-      
-        
-
+          <div class="container"></div>
         </main>
-        </div>
-        <footer id="footer">
-
-        </footer>
+      </div>
+      <footer id="footer"></footer>
     </div>
-</body>
+  </body>
 </html>
