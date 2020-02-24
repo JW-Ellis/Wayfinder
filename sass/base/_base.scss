@@ -10,22 +10,19 @@ html {
   font-size: 62.5%;
 }
 
-/* #page-container {
+#page-container {
   position: relative;
   background: $color-page;
   min-height: 100vh;
-} */
-
-body {
-  background-image: url("../img/home.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 #page-containerPrimary {
   position: relative;
   min-height: 100vh;
+  background-image: url("../img/home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
   // background-color: $color-page;
 }

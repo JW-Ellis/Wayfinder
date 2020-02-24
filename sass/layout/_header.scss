@@ -1,7 +1,7 @@
 .header {
   //  background-color: $color-header;
   //  position: relative;
-  height: 4rem;
+  height: auto;
   //  padding: 2rem;
   //  text-align: left;
   //  color: white;
@@ -17,4 +17,23 @@
   h1 {
     font-size: 3.5rem;
   }
+  p {
+    margin-top: 3.5rem;
+    font-size: 2rem;
+    font-family: $container-font;
+    color: $color-blue;
+    padding: 0rem 4rem;
+  }
+
+  background-color: $color-header;
+  height: 9rem;
+}
+
+.toolbar {
+  margin-left: 6rem;
+}
+
+.underline {
+  border-bottom: 0.2rem solid $color-blue;
+  padding-bottom: 1rem;
 }
