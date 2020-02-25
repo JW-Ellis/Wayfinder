@@ -17,7 +17,8 @@
   h1 {
     font-size: 3.5rem;
   }
-  p {
+  p,
+  a {
     margin-top: 3.5rem;
     font-size: 2rem;
     font-family: $container-font;
@@ -31,6 +32,12 @@
 
 .toolbar {
   margin-left: 6rem;
+}
+
+.anchor,
+a:hover {
+  margin-top: 3.5rem;
+  text-decoration: none;
 }
 
 .underline {

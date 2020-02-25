@@ -272,7 +272,8 @@ html {
 .header_container h1 {
   font-size: 3.5rem;
 }
-.header_container p {
+.header_container p,
+.header_container a {
   margin-top: 3.5rem;
   font-size: 2rem;
   font-family: "Montserrat", sans-serif;
@@ -282,6 +283,12 @@ html {
 
 .toolbar {
   margin-left: 6rem;
+}
+
+.anchor,
+a:hover {
+  margin-top: 3.5rem;
+  text-decoration: none;
 }
 
 .underline {
