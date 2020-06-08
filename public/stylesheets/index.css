@@ -14,7 +14,7 @@ html {
 
 #page-container {
   position: relative;
-  background: #29d4af;
+  background: #fee8cd;
   min-height: 100vh;
 }
 
@@ -25,10 +25,7 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-#content-wrap {
-  padding-bottom: 10rem;
+  background-color: #fee8cd;
 }
 
 .search-button {
@@ -42,9 +39,6 @@ html {
   text-transform: uppercase;
   background-color: transparent;
   border: none;
-}
-.search-button:focus, .search-button:hover {
-  background-color: #ffbe5d;
 }
 .search-button:active {
   background-color: #ffdca2;
@@ -98,7 +92,6 @@ html {
 }
 
 .container {
-  margin: 3rem auto;
   padding: 0;
 }
 
@@ -123,7 +116,13 @@ html {
 }
 
 .image-contain {
-  margin: 0rem 1rem 1.5rem;
+  background: #fee8cd;
+  width: 68%;
+}
+
+.img-fluid {
+  width: 100%;
+  max-height: 100vh;
 }
 
 #picture-summary {
@@ -228,16 +227,24 @@ html {
   background-color: #002860;
 }
 
+.container-results {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
 .search-results {
-  background-color: #ffffff;
+  align-items: flex-end;
+  height: auto;
+  width: 32%;
   box-shadow: 3px 8px 5px rgba(0, 0, 0, 0.377);
-  border: 0.4rem solid black;
-  margin: 3rem;
   color: #ffffff;
   border-radius: 0.75rem;
   font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
   font-weight: bold;
+  background: #fee8cd;
+  color: #002860;
 }
 .search-results h1 {
   font-size: 3.5rem;
@@ -251,15 +258,17 @@ html {
   font-family: "Cutive Mono", monospace;
 }
 
-#footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 10rem;
+.city-rating {
+  padding: 6rem 5rem;
+}
+.city-rating p {
+  font-family: "Courier New", serif;
+  font-size: 1.8rem;
 }
 
 .header {
   height: auto;
+  width: 100%;
   /* h1 {         font-size: 8rem;
          padding-top: 2rem;
      } */

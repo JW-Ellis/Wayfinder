@@ -32,7 +32,27 @@
             </div>
           </div>
         </header>
-        <main></main>
+        <main>
+          <div class="container-results">
+            <div class="image-contain">
+              <img
+                src="<%= trailData[5] %>"
+                onerror="this.onerror=null;this.src='noPhoto.jpg';"
+                alt="Trail Picture"
+                class="img-fluid"
+              />
+            </div>
+            <div class="search-results">
+              <div class="city-rating">
+                <p><%= trailData[4] %></p>
+                <div class="stars-outer">
+                  <div class="stars-inner"></div>
+                  <span class="number-rating"><%= trailData[3] %></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
       </div>
       <footer id="footer"></footer>
     </div>

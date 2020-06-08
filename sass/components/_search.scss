@@ -58,16 +58,23 @@
 }
 
 //Trail results page
+.container-results {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
 .search-results {
-  background-color: $color-header;
+  align-items: flex-end;
+  height: auto;
+  width: 32%;
   box-shadow: 3px 8px 5px rgba(0, 0, 0, 0.377);
-  border: 0.4rem solid black;
-  margin: 3rem;
   color: $color-font;
   border-radius: 0.75rem;
   font-family: $container-font;
   font-size: 1.4rem;
   font-weight: bold;
+  background: $color-secondary;
+  color: $color-blue;
 
   h1 {
     font-size: 3.5rem;
@@ -81,4 +88,13 @@
   box-shadow: 3px 8px 5px rgba(0, 0, 0, 0.377);
   border: black solid 0.25rem;
   font-family: "Cutive Mono", monospace;
+}
+
+.city-rating {
+  padding: 6rem 5rem;
+
+  p {
+    font-family: $title-font;
+    font-size: 1.8rem;
+  }
 }

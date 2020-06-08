@@ -10,7 +10,13 @@
 }
 
 .image-contain {
-  margin: 0rem 1rem 1.5rem;
+  background: $color-secondary;
+  width: 68%;
+}
+
+.img-fluid {
+  width: 100%;
+  max-height: 100vh;
 }
 
 #picture-summary {

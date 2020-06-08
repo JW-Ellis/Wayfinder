@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "sass": "sass --watch sass/:public/stylesheets"
   },
   "repository": {
     "type": "git",

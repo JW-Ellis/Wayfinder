@@ -12,7 +12,7 @@ html {
 
 #page-container {
   position: relative;
-  background: $color-page;
+  background: $color-secondary;
   min-height: 100vh;
 }
 
@@ -24,9 +24,8 @@ html {
   background-repeat: no-repeat;
   background-position: center;
 
-  // background-color: $color-page;
+  background-color: $color-secondary;
 }
 
 #content-wrap {
-  padding-bottom: 10rem;
 }
