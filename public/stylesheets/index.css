@@ -117,7 +117,7 @@ html {
 
 .image-contain {
   background: #fee8cd;
-  width: 68%;
+  width: 93%;
 }
 
 .img-fluid {
@@ -155,6 +155,18 @@ html {
   margin-top: 3.5rem;
 }
 
+.location {
+  background-image: url("../img/location.png");
+  position: relative;
+  top: 5px;
+  float: inline-start;
+  width: 2.5rem;
+  height: 1.7rem;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .stars-outer {
   position: relative;
   display: inline-block;
@@ -180,7 +192,7 @@ html {
   content: "";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  color: #f8ce0b;
+  color: #002860;
 }
 
 .search {
@@ -245,6 +257,7 @@ html {
   font-weight: bold;
   background: #fee8cd;
   color: #002860;
+  padding: 8.4rem 8rem;
 }
 .search-results h1 {
   font-size: 3.5rem;
@@ -258,12 +271,50 @@ html {
   font-family: "Cutive Mono", monospace;
 }
 
-.city-rating {
-  padding: 6rem 5rem;
-}
 .city-rating p {
   font-family: "Courier New", serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.search-intro {
+  position: relative;
+  top: 1rem;
+}
+.search-intro h1 {
+  font-size: 4.3rem;
+  font-weight: 900;
+  border-bottom: 10px solid #002860;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+.search-intro p {
+  position: relative;
+  top: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.search-summary {
+  position: relative;
+  top: 3rem;
+}
+.search-summary h1 {
+  font-family: "Courier New", serif;
+  font-weight: 600;
+  font-size: 3.1rem;
+  letter-spacing: 0.1rem;
+  border-bottom: 5px solid #002860;
+}
+.search-summary ul {
+  position: relative;
+  top: 0.8rem;
+  column-count: 2;
+  list-style: none;
+}
+
+.detail-title {
+  font-family: "Courier New", serif;
 }
 
 .header {

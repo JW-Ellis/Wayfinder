@@ -11,7 +11,7 @@
 
 .image-contain {
   background: $color-secondary;
-  width: 68%;
+  width: 93%;
 }
 
 .img-fluid {
@@ -47,4 +47,16 @@
   background-size: contain;
   margin-left: 8rem;
   margin-top: 3.5rem;
+}
+
+.location {
+  background-image: url("../img/location.png");
+  position: relative;
+  top: 5px;
+  float: inline-start;
+  width: 2.5rem;
+  height: 1.7rem;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
 }

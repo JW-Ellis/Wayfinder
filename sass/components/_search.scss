@@ -75,6 +75,7 @@
   font-weight: bold;
   background: $color-secondary;
   color: $color-blue;
+  padding: 8.4rem 8rem;
 
   h1 {
     font-size: 3.5rem;
@@ -91,10 +92,51 @@
 }
 
 .city-rating {
-  padding: 6rem 5rem;
-
   p {
     font-family: $title-font;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    letter-spacing: 1px;
   }
+}
+
+.search-intro {
+  position: relative;
+  top: 1rem;
+  h1 {
+    font-size: 4.3rem;
+    font-weight: 900;
+    border-bottom: 10px solid $color-blue;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+
+  p {
+    position: relative;
+    top: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+  }
+}
+
+.search-summary {
+  position: relative;
+  top: 3rem;
+
+  h1 {
+    font-family: $primary-font;
+    font-weight: 600;
+    font-size: 3.1rem;
+    letter-spacing: 0.1rem;
+    border-bottom: 5px solid #002860;
+  }
+  ul {
+    position: relative;
+    top: 0.8rem;
+    column-count: 2;
+    list-style: none;
+  }
+}
+
+.detail-title {
+  font-family: $primary-font;
 }

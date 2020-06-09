@@ -44,10 +44,42 @@
             </div>
             <div class="search-results">
               <div class="city-rating">
+                <div class="location"></div>
                 <p><%= trailData[4] %></p>
                 <div class="stars-outer">
                   <div class="stars-inner"></div>
                   <span class="number-rating"><%= trailData[3] %></span>
+                </div>
+              </div>
+              <div class="search-intro">
+                <h1><%= trailData[0] %></h1>
+                <p><%= trailData[1] %></p>
+              </div>
+              <div class="search-summary">
+                <h1>Trail Summary</h1>
+                <div class="summary-detail">
+                  <ul>
+                    <li>
+                      <span class="detail-title">Mileage</span>:
+                      <span><%= trailData[6] %> mi</span>
+                    </li>
+                    <li>
+                      <span class="detail-title">Ascent</span>:
+                      <span><%= trailData[7] %></span> ft
+                    </li>
+                    <li>
+                      <span class="detail-title">Decent</span>:
+                      <span><%= trailData[8] %> ft</span>
+                    </li>
+                    <li>
+                      <span class="detail-title">High</span>:
+                      <span><%= trailData[9] %> ft</span>
+                    </li>
+                    <li>
+                      <span class="detail-title">Low</span>:
+                      <span><%= trailData[10] %> ft</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
