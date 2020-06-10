@@ -61,25 +61,60 @@
                   <ul>
                     <li>
                       <span class="detail-title">Mileage</span>:
-                      <span><%= trailData[6] %> mi</span>
+                      <span class="mileage"><%= trailData[6] %> mi</span>
                     </li>
                     <li>
                       <span class="detail-title">Ascent</span>:
-                      <span><%= trailData[7] %></span> ft
+                      <span class="ascent"
+                        ><span class="trail-ascent"><%= trailData[7] %></span>
+                        ft</span
+                      >
                     </li>
                     <li>
                       <span class="detail-title">Decent</span>:
-                      <span><%= trailData[8] %> ft</span>
+                      <span class="decent"><%= trailData[8] %> ft</span>
                     </li>
                     <li>
                       <span class="detail-title">High</span>:
-                      <span><%= trailData[9] %> ft</span>
+                      <span class="high"><%= trailData[9] %> ft</span>
                     </li>
                     <li>
                       <span class="detail-title">Low</span>:
-                      <span><%= trailData[10] %> ft</span>
+                      <span class="low"><%= trailData[10] %> ft</span>
                     </li>
                   </ul>
+                  <div class="summary">
+                    <div class="trail-compare">
+                      <img
+                        src=""
+                        alt="Trail comparison image"
+                        class="img-fluid"
+                        id="trail-picture"
+                      />
+                    </div>
+                    <div class="trail-summary">
+                      <p id="picture-summary"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="forecast">
+                  <h1>Forecast</h1>
+                  <div class="forecast-detail">
+                    <ul>
+                      <li>
+                        <span class="forecast-title">Temperature</span>:
+                        <span class="temperature"><%= forecast[1] %>&#8457 </span>
+                      </li>
+                      <li>
+                        <span class="forecast-title">Detail</span>:
+                        <span class="detail"><%= forecast[2] %> </span>
+                      </li>
+                      <li>
+                        <span class="forecast-title">Wind</span>:
+                        <span class="wind"><%= forecast[5] %> </span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>

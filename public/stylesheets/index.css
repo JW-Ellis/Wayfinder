@@ -72,25 +72,6 @@ html {
   width: 20%;
 }
 
-.forecast-summary {
-  margin: 1rem;
-  font-size: 1.2rem;
-}
-
-.forecast-content {
-  margin: 1.6rem 1rem;
-}
-
-.forecast-temperature {
-  margin-right: 2rem;
-}
-.forecast-temperature h2 {
-  font-size: 2rem;
-}
-.forecast-temperature p {
-  font-size: 2rem;
-}
-
 .container {
   padding: 0;
 }
@@ -127,10 +108,6 @@ html {
 
 #picture-summary {
   font-size: 1.2rem;
-}
-
-#trail-picture {
-  border: 1px solid black;
 }
 
 .arrow {
@@ -315,6 +292,52 @@ html {
 
 .detail-title {
   font-family: "Courier New", serif;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 1.7rem;
+}
+
+.mileage {
+  position: relative;
+  left: 1rem;
+  letter-spacing: 0.3rem;
+}
+
+.ascent {
+  position: relative;
+  left: 1.8rem;
+  letter-spacing: 0.3rem;
+}
+
+.decent {
+  position: relative;
+  left: 1.1rem;
+  letter-spacing: 0.3rem;
+}
+
+.high {
+  position: relative;
+  left: 1rem;
+  letter-spacing: 0.3rem;
+}
+
+.low {
+  position: relative;
+  left: 2rem;
+  letter-spacing: 0.3rem;
+}
+
+.summary {
+  display: flex;
+  position: relative;
+  top: 1rem;
+  justify-content: space-around;
+}
+.summary .trail-compare {
+  width: 14%;
+}
+.summary .trail-summary {
+  width: 60%;
 }
 
 .header {

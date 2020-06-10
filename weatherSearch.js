@@ -1,11 +1,13 @@
-const fetch = require('node-fetch');
-const zipcodes = require('zipcodes');
+const fetch = require("node-fetch");
+const zipcodes = require("zipcodes");
 
 exports.forecast = async function search(zip) {
   let name;
   let temperature;
   let detail;
   let icon;
+  let wind;
+  let windDirection;
 
   try {
     const zipData = zipcodes.lookup(zip);
@@ -16,6 +18,7 @@ exports.forecast = async function search(zip) {
     // const lat = 39.7162;
     // const lon = -105.2098;
 
+    //returns weather url with forecast zone included
     const weatherURL = `https://api.weather.gov/points/${lat},${lon}`;
     const weatherResponse = await fetch(weatherURL);
     const weatherReturn = await weatherResponse.json();
@@ -29,11 +32,13 @@ exports.forecast = async function search(zip) {
     // Get forecast data
     name = forecastParse.name;
     temperature = forecastParse.temperature;
-    detail = forecastParse.detailedForecast;
+    detail = forecastParse.isDaytime;
     icon = forecastParse.icon;
+    wind = forecastParse.windSpeed;
+    windDirection = forecastParse.windDirection;
 
-    return [name, temperature, detail, icon];
+    return [name, temperature, detail, icon, wind, windDirection];
   } catch (e) {
-    console.log('Forecast error: ', e.message);
+    console.log("Forecast error: ", e.message);
   }
 };

@@ -139,4 +139,52 @@
 
 .detail-title {
   font-family: $primary-font;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 1.7rem;
+}
+
+.mileage {
+  position: relative;
+  left: 1rem;
+  letter-spacing: 0.3rem;
+}
+
+.ascent {
+  position: relative;
+  left: 1.8rem;
+  letter-spacing: 0.3rem;
+}
+
+.decent {
+  position: relative;
+  left: 1.1rem;
+  letter-spacing: 0.3rem;
+}
+
+.high {
+  position: relative;
+  left: 1rem;
+  letter-spacing: 0.3rem;
+}
+
+.low {
+  position: relative;
+  left: 2rem;
+  letter-spacing: 0.3rem;
+}
+
+.summary {
+  display: flex;
+  position: relative;
+  top: 1rem;
+  justify-content: space-around;
+
+  .trail-compare {
+    width: 14%;
+  }
+
+  .trail-summary {
+    width: 60%;
+  }
 }
