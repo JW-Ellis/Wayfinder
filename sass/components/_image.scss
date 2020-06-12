@@ -3,28 +3,29 @@
   height: auto;
 }
 
-.image-search {
-  //padding: 1.0rem;
-  //object-fit: scale-down;
-  border: 0.2rem solid black;
-}
-
 .image-contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   background: $color-secondary;
   width: 93%;
 }
 
 .img-fluid {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 110vh;
+  max-height: 110vh;
   width: 100%;
-  max-height: 100vh;
+}
+
+.icon {
+  width: 100%;
 }
 
 #picture-summary {
   font-size: 1.2rem;
-}
-
-#trail-picture {
-  //border: 1px solid black;
 }
 
 .arrow {

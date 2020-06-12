@@ -88,7 +88,7 @@
                       <img
                         src=""
                         alt="Trail comparison image"
-                        class="img-fluid"
+                        class="icon"
                         id="trail-picture"
                       />
                     </div>
@@ -99,21 +99,26 @@
                 </div>
                 <div class="forecast">
                   <h1>Forecast</h1>
-                  <div class="forecast-detail">
-                    <ul>
-                      <li>
-                        <span class="forecast-title">Temperature</span>:
-                        <span class="temperature"><%= forecast[1] %>&#8457 </span>
-                      </li>
-                      <li>
-                        <span class="forecast-title">Detail</span>:
-                        <span class="detail"><%= forecast[2] %> </span>
-                      </li>
-                      <li>
-                        <span class="forecast-title">Wind</span>:
-                        <span class="wind"><%= forecast[5] %> </span>
-                      </li>
-                    </ul>
+                  <div class="forecast-summary">
+                    <div class="forecast-detail">
+                      <ul>
+                        <li>
+                          <span class="detail-title">Temperature</span>:
+                          <span class="temperature"><%= forecast[1] %>&#8457 </span>
+                        </li>
+                        <li>
+                          <span class="detail-title">Wind</span>:
+                          <span class="wind"><%= forecast[5] %> <%= forecast[4] %> </span>
+                        </li>
+                        <li>
+                          <span class="detail-title">Detail</span>:
+                          <span class="detail"><%= forecast[2] %> </span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="forecast-image">
+                      <img src="<%= forecast[3] %>" alt="Forecast Icon">
+                    </div>
                   </div>
                 </div>
               </div>

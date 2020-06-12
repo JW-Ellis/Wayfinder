@@ -32,7 +32,7 @@ exports.forecast = async function search(zip) {
     // Get forecast data
     name = forecastParse.name;
     temperature = forecastParse.temperature;
-    detail = forecastParse.isDaytime;
+    detail = forecastParse.shortForecast;
     icon = forecastParse.icon;
     wind = forecastParse.windSpeed;
     windDirection = forecastParse.windDirection;

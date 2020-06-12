@@ -1,22 +1,17 @@
 //Search form
 .search {
-  //top: 44rem;
   margin-top: 42rem;
   padding: 1rem;
-  //background-color: $color-header;
-  //box-shadow: 3px 8px 5px rgba(0, 0, 0, 0.377);
-  //border: 0.4rem solid black;
+
   color: #ffffff;
   border-radius: 0.75rem;
   font-family: $primary-font;
   font-size: 1.4rem;
-  //font-weight: bold;
 
   h2 {
     font-size: 3rem;
-    //font-family: $primary-font;
+
     font-weight: bold;
-    //text-transform: uppercase;
   }
 
   .margin-center {
@@ -60,26 +55,24 @@
 //Trail results page
 .container-results {
   display: flex;
-  height: 100vh;
+  height: max-content;
+  min-height: 105vh;
   width: 100%;
 }
 .search-results {
   align-items: flex-end;
   height: auto;
   width: 32%;
-  box-shadow: 3px 8px 5px rgba(0, 0, 0, 0.377);
-  color: $color-font;
-  border-radius: 0.75rem;
+  //box-shadow: 3px 8px 5px rgba(0, 0, 0, 0.377);
   font-family: $container-font;
   font-size: 1.4rem;
   font-weight: bold;
   background: $color-secondary;
   color: $color-blue;
-  padding: 8.4rem 8rem;
+  padding: 3.5rem 6rem;
 
   h1 {
     font-size: 3.5rem;
-    //font-weight: bold;
   }
 }
 
@@ -132,8 +125,14 @@
   ul {
     position: relative;
     top: 0.8rem;
-    column-count: 2;
+
     list-style: none;
+  }
+}
+
+.summary-detail {
+  ul {
+    column-count: 2;
   }
 }
 
@@ -186,5 +185,33 @@
 
   .trail-summary {
     width: 60%;
+  }
+}
+
+.forecast {
+  position: relative;
+  top: 3rem;
+
+  .temperature {
+    position: relative;
+    left: 1rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .detail {
+    position: relative;
+    left: 6.1rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .wind {
+    position: relative;
+    left: 8rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .forecast-summary {
+    display: flex;
+    justify-content: space-between;
   }
 }

@@ -92,18 +92,25 @@ html {
   height: auto;
 }
 
-.image-search {
-  border: 0.2rem solid black;
-}
-
 .image-contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   background: #fee8cd;
   width: 93%;
 }
 
 .img-fluid {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 110vh;
+  max-height: 110vh;
   width: 100%;
-  max-height: 100vh;
+}
+
+.icon {
+  width: 100%;
 }
 
 #picture-summary {
@@ -218,7 +225,8 @@ html {
 
 .container-results {
   display: flex;
-  height: 100vh;
+  height: max-content;
+  min-height: 105vh;
   width: 100%;
 }
 
@@ -226,15 +234,12 @@ html {
   align-items: flex-end;
   height: auto;
   width: 32%;
-  box-shadow: 3px 8px 5px rgba(0, 0, 0, 0.377);
-  color: #ffffff;
-  border-radius: 0.75rem;
   font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
   font-weight: bold;
   background: #fee8cd;
   color: #002860;
-  padding: 8.4rem 8rem;
+  padding: 3.5rem 6rem;
 }
 .search-results h1 {
   font-size: 3.5rem;
@@ -286,8 +291,11 @@ html {
 .search-summary ul {
   position: relative;
   top: 0.8rem;
-  column-count: 2;
   list-style: none;
+}
+
+.summary-detail ul {
+  column-count: 2;
 }
 
 .detail-title {
@@ -338,6 +346,30 @@ html {
 }
 .summary .trail-summary {
   width: 60%;
+}
+
+.forecast {
+  position: relative;
+  top: 3rem;
+}
+.forecast .temperature {
+  position: relative;
+  left: 1rem;
+  letter-spacing: 0.3rem;
+}
+.forecast .detail {
+  position: relative;
+  left: 6.1rem;
+  letter-spacing: 0.3rem;
+}
+.forecast .wind {
+  position: relative;
+  left: 8rem;
+  letter-spacing: 0.3rem;
+}
+.forecast .forecast-summary {
+  display: flex;
+  justify-content: space-between;
 }
 
 .header {
