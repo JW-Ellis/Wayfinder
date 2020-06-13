@@ -338,6 +338,7 @@ html {
   position: relative;
   top: 1rem;
   justify-content: space-around;
+  align-items: center;
 }
 .summary .trail-compare {
   width: 14%;
